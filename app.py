@@ -5,7 +5,7 @@ import os
 from PIL import Image
 
 app = Flask(__name__)
-model = tf.keras.models.load_model('model/digit_generator_model.h5')
+model = tf.keras.models.load_model('model/digit_generator_model2.keras')
 
 def generate_images(digit, n=5):
     images = []
