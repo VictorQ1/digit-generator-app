@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Digit Generator</title>
+</head>
+
+<body>
+    <h1>Generate Handwritten Digit Images</h1>
+    <form method="post">
+        <label for="digit">Choose a digit (0–9):</label>
+        <input type="number" name="digit" min="0" max="9" required>
+        <input type="submit" value="Generate">
+    </form>
+    {% if images %}
+    <h2>Generated Images for Digit {{ digit }}</h2>
+    {% for img in images %}
+    <img src="{{ img }}" alt="Generated Image" style="margin:10px; width: 100px; height: 100px;">
+    {% endfor %}
+    {% endif %}
+</body>
+
+</html>
